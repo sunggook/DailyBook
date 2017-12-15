@@ -1,0 +1,49 @@
+﻿Feature good to have
+- Search of word on the given bible book.
+[
+	* Use IndexedDB for data search process (on progress; input not accept text)
+	* App read the already created indexeddb file (not possible)
+	    * During init time, it creates indexedDb from given JSON on dedicated worker.
+		* JSON data file is created beforehand that it is DB with key and value schema
+		* Search: it searches from created indexedDB.
+
+	* Search results are 100 max (done)
+	* key: word; value: Reserved (2^8) Book (2^8)Chapter(2^8)Verse(2^8)
+	     eg. 00 13 96 06 (Psalms, 150:6).
+	* 
+
+]
+- Show transparent title on Image in the Home when mouse right click (done).
+- Show nav bar for all bible/books as well. (done)
+- Replace icons only for the menu without name in the menu. (postpone)
+- Let user download new bible version from the https://sourceforge.net/projects/zefania-sharp/files/Bibles/
+   and register it on the device, and use it.
+- Introductary UI that show touching upper area will show menu (done)
+- Select words/word and show dictionary.
+- Select all verse and change the color of it (done)
+- Share the verses with other app such as facebook/mail with right click of it (?)
+- Search words (done)
+- Show introductary UI about the menu (P1)
+	- If not this, we need to make menu more common UWP menu or carosals?
+- Translate chapter or verse with Google Translation?
+   -> Translation isn't free.
+- Highlight verses and save them to global, and 'Utils' has 'highlights' section
+  where it store highlight verses.
+- overall chars are too small
+- Menu icon is too small.
+
+Bugs:
+- font selection doesn't affect next/prev page (fix)
+- input box on ui.router layout doesn't accept input (fix)
+- Fix ugly chapter number table when it doesn't have number (fixed)
+- Search ranking doesn't work correctly (fix)
+- First search operation takes long time - aka.DB build should be done during start up. (alternative fix)
+- 'share' on context menu does not work.
+- Book doesn't show up when it has only 1 chapter (done)
+- IndexedDB takes too long time to build at first time (done)
+	- fix is made to show spinning window for building and searching
+- 'touchStart' event handler isn't deleted due to Arrow handler for es6 on class.
+
+
+11/23/2016
+

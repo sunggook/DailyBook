@@ -1,0 +1,240 @@
+﻿body {
+  /* Uncomment this to enable scrolling and zooming
+  touch-action: manipulation;
+  */
+
+  overflow:scroll;
+  background-image: Url("/images/background-flower.jpg");
+}
+
+::selection {
+    color: red;
+    background: yellow;
+}
+
+/* General */
+.button {
+    background-size: cover;
+    width:100%;
+    background-repeat:no-repeat;
+    margin:5px;
+}
+
+.bibleContent {
+    padding: 10px;
+    padding-top: 10px;
+}
+
+.button.home{
+    height:100%;
+}
+
+.button.book{
+    height:50%;
+}
+
+.button.chapter{
+    height:100%;
+}
+
+.button.translations {
+    height:100%;
+    width:100%;
+}
+
+.button.search {
+    height:50%;
+    width:50%;
+}
+
+.button.history {
+    height:50%;
+    width:50%;
+}
+
+table {
+    table-layout:auto;
+    border-collapse:collapse;
+    font-family:'Times New Roman';
+    /*font-size:14px;*/
+}
+
+/* Bible.html */
+.bible-table td {
+    border:1px solid black;
+    padding:1px;
+    text-align:center;
+    font-size: 16px;
+}
+
+/* book.html*/
+.book-table td {
+    border:2px solid black;
+    padding: 1px;
+    column-width: 100px;
+    text-align:center;
+    font-size: 16px;
+}
+
+/* Index.html */
+td {
+    padding-bottom: 10px;
+}
+
+.arrow-up {
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+    display:inline-block;
+    
+}
+
+.arrow-down {
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+    display:inline-block;
+}
+
+.header {
+    width:800px;
+    height: 80px;
+    text-align:center;
+    background-color:#BDBDBD;
+}
+
+a {
+    padding:5px;
+}
+
+/* home.html mouse hover on the text of image*/
+.image-button {
+    position:relative;
+}
+
+.large-image-text {
+    position:absolute;
+    opacity: 0.8;
+    font-family: Calibri;
+    font-size:130px;
+    top: 100px;
+    margin-left:20px;
+}
+
+.small-image-text {
+    position:absolute;
+    opacity: 0.8;
+    font-family: Calibri;
+    font-size:25px;
+    top: 50px;
+    margin-left:10px;
+    margin-top:-12px;
+}
+
+/* Chapter.html */
+#contextMenu {
+    position: absolute;
+    display:none;
+}
+
+.version-selection {
+    background-color:cadetblue;
+}
+
+.menu-lastitem {
+    padding-left:15px;
+    padding-bottom: 20px;
+    /*height:75px;*/
+}
+
+.menu-navigateTo {
+    border-width:thin;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.menu-navigateTo-item {
+    padding-right: 0px;
+}
+
+.glyphicon {
+    padding-top: 15px;
+    font-size:1.3em;
+}
+
+.chapter-title {
+    padding-bottom:3px;
+    padding-left:5px;
+    font-size:16px;
+    font-weight:600;
+    font-style:italic;
+}
+
+.chapter-contents {
+    padding-bottom:5px;
+    padding-right: 10px;
+    padding-top:30px;
+    font-weight:500;
+}
+
+/* Tool tip for chapter at first start*/
+#slide-panel {
+    width:100%;
+    height:160px;
+    padding:10px;
+    background-color:darkblue;
+}
+
+#opener {
+    float:right;
+    margin:-10px -50px 0px 0px;
+    border-radius:0;
+}
+
+.verse-text {
+    font-family: Calibri;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.verse-number {
+    padding-left: 3px;
+}
+
+th {
+    border:1px solid black;
+    padding: 5px;
+    text-align: left;
+    cursor:pointer;
+}
+
+.chapter-menu {
+    margin:10px;
+    text-align:left;
+}
+
+.dotted {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+/* Search.html*/
+
+/*.search-row :nth-child(odd){
+    background-color: aliceblue;
+}*/
+
+.glyphicon-refresh-animate {
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+

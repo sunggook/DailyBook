@@ -1,0 +1,48 @@
+﻿<!--<script src="/js/bible.js"></script>-->
+
+<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top chapter-menu">
+        <div class="chapter-navigateTo col-lg-3 col-md-4 col-sm-8 col-sx-12">
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-2">
+                <a id="home" class="glyphicon glyphicon-home" ng-click="navigateToHome()">Home</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-2">
+                <a id="sort" class="glyphicon glyphicon-sort-by-alphabet" ng-click="sortByAlphabet()">Sort</a>
+            </span>
+        </div>
+        <hr style="margin-top:15px;margin-bottom:15px" />
+        <div class="chapter-fontSize col-lg-6 col-md-6 col-sm-12 col-sx-12 menu-lastitem">
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-2">
+                <a style="font-size:16px" ng-click="changeFontSize('16px')">A</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-2">
+                <a style="font-size:20px" ng-click="changeFontSize('20px')">A</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+                <a style="font-size:24px" ng-click="changeFontSize('24px')">A</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+                <a style="font-size:28px" ng-click="changeFontSize('28px')">A</a>
+            </span>
+        </div>
+    </nav>
+    <div class="bibleContent">
+        <h2 style="background-color:darkseagreen">{{bibleVersion}}</h2>
+        <br />
+        <div style="background-color:darkgray; font-size:20px"> Old Testmament </div>
+        <table class="table table-hover">
+            <tr class="bible-table" ng-repeat="book in oldBooks">
+                <td class="book-name" data-ng-click="openChapter(book.item0.name)">{{book.item0.name}}</td>
+                <td class="book-name" data-ng-click="openChapter(book.item1.name)">{{book.item1.name}}</td>
+            </tr>
+        </table>
+        <br />
+        <div style="background-color:darkgray; font-size:20px"> New Testmament </div>
+        <table class="table table-hover">
+            <tr class="bible-table" ng-repeat="book in newBooks">
+                <td class="book-name" data-ng-click="openChapter(book.item0.name)">{{book.item0.name}}</td>
+                <td class="book-name" data-ng-click="openChapter(book.item1.name)">{{book.item1.name}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

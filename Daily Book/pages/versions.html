@@ -1,0 +1,33 @@
+﻿<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top chapter-menu">
+        <div class="chapter-navigateTo col-lg-3 col-md-4 col-sm-8 col-sx-12 menu-lastitem">
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-2">
+                <a class="glyphicon glyphicon-home" ng-click="navigateToHome()">Home</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-2">
+                <a class="glyphicon glyphicon-book" ng-click="navigateToBible()">Bible</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-2">
+                <a class="glyphicon glyphicon-equalizer" ng-click="navigateToBook()">Book</a>
+            </span>
+        </div>
+    </nav>
+    <div>
+        <h4 style="margin-bottom:20px">Bible Translations</h4>
+        <ol class="breadcrumb version-selection" ng-click="selectVersion('King James Version')">
+            <li class="breadcrumb-item">King James Version</li>
+        </ol>
+        <ol class="breadcrumb version-selection"  ng-click="selectVersion('American Standard Version')">
+            <li class="breadcrumb-item">American Standard Version</li>
+        </ol>
+        <!--<ol class="breadcrumb version-selection">
+            <li class="breadcrumb-item" ng-click="selectVersion('Revised Standard Version')">Revised Statndard Version</li>
+        </ol>-->
+        <ol class="breadcrumb version-selection" ng-click="selectVersion('World English Bible')">
+            <li class="breadcrumb-item">World English Bible</li>
+        </ol>
+        <ol class="breadcrumb version-selection" ng-click="selectVersion('Korean Version')">
+            <li class="breadcrumb-item">한국어 성경</li>
+        </ol>
+    </div>
+</div>

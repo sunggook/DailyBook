@@ -1,0 +1,23 @@
+﻿<!--<script src="/js/book.js"></script>-->
+<div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top chapter-menu">
+        <div class="chapter-navigateTo col-lg-3 col-md-4 col-sm-8 col-sx-12 menu-lastitem">
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-2">
+                <a id="home" class="glyphicon glyphicon-home" ng-click="navigateToHome()">Home</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-2">
+                <a id="home" class="glyphicon glyphicon-book" ng-click="navigateToBible()">Bible</a>
+            </span>
+        </div>
+    </nav>
+    <div id="bookIndex">
+        <h2 style="font-weight:600"> {{bookName}}</h2>
+        <table class="table table-hover">
+            <tr class="book-table" ng-repeat="index in indexes">
+                <td class="chapter-number" ng-if="index.item0.index.length !== 0" data-ng-click="navigateToChapter(index.item0.index)">{{index.item0.index}}</td>
+                <td class="chapter-number" ng-if="index.item1.index.length !== 0" data-ng-click="navigateToChapter(index.item1.index)">{{index.item1.index}}</td>
+                <td class="chapter-number" ng-if="index.item2.index.length !== 0" data-ng-click="navigateToChapter(index.item2.index)">{{index.item2.index}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

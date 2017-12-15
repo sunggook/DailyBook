@@ -1,0 +1,66 @@
+﻿<div class="chapter-contents" id="chaterController-Panel">
+    <div id="slide-panel" style="position:absolute">
+        <div>
+            <font color="white" style="font-size: x-large">
+                You can see the menu that is relevant the current page when clicking the
+                upper area of the page.
+            </font>
+        </div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top menu-navigateTo" style="position:absolute">
+        <div class="chapter-navigateTo col-lg-3 col-md-4 col-sm-8 col-sx-12 menu-navigateTo">
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-3 menu-navigateTo-item">
+                <a class="glyphicon glyphicon-home" ng-click="navigateToHome()">Home</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-3 menu-navigateTo-item">
+                <a class="glyphicon glyphicon-book" ng-click="navigateToBible()">Bible</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-2 col-sx-3 menu-navigateTo-item">
+                <a class="glyphicon glyphicon-equalizer" ng-click="navigateToBook()">Book</a>
+            </span>
+        </div>
+        <hr style="margin-top:15px;margin-bottom:15px"/>
+        <div class="chapter-fontSize col-lg-6 col-md-6 col-sm-12 col-sx-12">
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-2">
+                <a style="font-size:16px" ng-click="changeFontSize('16px')">A</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-2">
+                <a style="font-size:20px" ng-click="changeFontSize('20px')">A</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+                <a style="font-size:24px" ng-click="changeFontSize('24px')">A</a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+                <a style="font-size:28px" ng-click="changeFontSize('28px')">A</a>
+            </span>
+        </div>
+        <hr style="margin-top:15px;margin-bottom:15px" />
+        <div class="menu-lastitem">
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+                <a id="reading" class="glyphicon glyphicon-play" ng-click="readingChapter()"></a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+                <a id="pause" class="glyphicon glyphicon-pause" ng-click="pauseReadingChapter()"></a>
+            </span>
+            <span class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+                <a id="stop" class="glyphicon glyphicon-stop" ng-click="stopReadingChapter()"></a>
+            </span>
+        </div>
+    </nav>
+    <div class="chapter-title" style="font-size:24px;background-color:cadetblue"> {{bookName}} : {{chapterNumber}}</div>
+    <br />
+    <table>
+        <tr ng-repeat="verse in verses" id="verseTable">
+            <!--<td class="verse-number">{{verse.index}}</td>-->
+            <td class="verse-text" ng-click="onTextClick($event, verse.index)" ng-right-click="showContextMenu($event, verse.index)">{{verse.text}}</td>
+        </tr>
+    </table>
+
+    <ul id="contextMenu" class="dropdown-menu" role="menu" style="display:none;background-color:lightgreen">
+        <li><a tabindex="-1" href="#">Underline</a></li>
+        <li><a tabindex="-1" href="#">Copy</a></li>
+        <li><a tabindex="-1" href="#">Share</a></li>
+        <li><a tabindex="-1" href="#">Commentary</a></li>
+    </ul>
+</div>
+
